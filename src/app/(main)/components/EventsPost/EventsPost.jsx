@@ -1,12 +1,12 @@
 /* eslint-disable jsx-a11y/alt-text */
 'use client';
 import { useEffect, useState } from 'react';
-import { API, eventApi } from '../../../../../api/api';
+import { eventApi } from '../../../../../api/api';
 import Image from 'next/image';
 import Link from 'next/link';
 
 // eslint-disable-next-line @next/next/no-async-client-component
-export default function Events() {
+export default function EventsPost() {
 	let [post, setPost] = useState();
 	useEffect(() => {
 		const fetchData = async () => {

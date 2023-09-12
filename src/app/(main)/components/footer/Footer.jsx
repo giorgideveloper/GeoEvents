@@ -8,7 +8,9 @@ export default function Footer() {
 					<div className='flex  '>
 						<p className='py-5'>© Copyright 2023</p>
 					</div>
-					<p className='py-5 text-slate-400/80'>დამზადებულია Lumos </p>
+					<p className='py-5 text-slate-400/80 text-lg'>
+						created by Irakli Beridze{' '}
+					</p>
 				</div>
 			</footer>
 		</div>

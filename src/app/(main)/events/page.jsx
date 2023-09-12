@@ -36,31 +36,33 @@ export default function Page() {
 					{post
 						? post.map(item => (
 								<>
-									<Link key={item.id} href={`events/${item.id}`} alt=''>
-										<div className='  bg-white border border-gray-200 rounded-2xl shadow my-card'>
-											<Image
-												width={350}
-												height={197}
-												src={item.image}
-												alt={'image'}
-											/>
+									<div key={item.id}>
+										<Link href={`events/${item.id}`} alt=''>
+											<div className='  bg-white border border-gray-200 rounded-2xl shadow my-card'>
+												<Image
+													width={350}
+													height={197}
+													src={item.image}
+													alt={'image'}
+												/>
 
-											<div className='p-5'>
-												<h5 className='mb-2 text-lg font-bold tracking-tight text-gray-900'>
-													{item.name_ka}
-												</h5>
+												<div className='p-5'>
+													<h5 className='mb-2 text-lg font-bold tracking-tight text-gray-900'>
+														{item.name_ka}
+													</h5>
 
-												<p
-													className='mb-3 font-normal text-gray-700 dark:text-gray-400'
-													dangerouslySetInnerHTML={
-														item.text_ka === undefined
-															? ''
-															: Dangerously(item.text_ka.slice(0, 120))
-													}
-												></p>
+													<p
+														className='mb-3 font-normal description text-gray-700 dark:text-gray-400'
+														dangerouslySetInnerHTML={
+															item.text_ka === undefined
+																? ''
+																: Dangerously(item.text_ka.slice(0, 120))
+														}
+													></p>
+												</div>
 											</div>
-										</div>
-									</Link>
+										</Link>
+									</div>
 								</>
 						  ))
 						: 'Loading'}

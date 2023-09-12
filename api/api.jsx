@@ -42,3 +42,15 @@ export const eventApiSearch = async str => {
 		throw error;
 	}
 };
+
+export const eventApiSearchs = async str => {
+	try {
+		const response = await axios.get(
+			`https://batumievents.com/api/?search=${str}`
+		);
+
+		return response.data;
+	} catch (error) {
+		throw error;
+	}
+};

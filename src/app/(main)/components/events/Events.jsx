@@ -35,14 +35,18 @@ export default function Events() {
 								<>
 									<Link key={item.id} href={`events/${item.id}`} alt=''>
 										<div className='  bg-white border border-gray-200 rounded-2xl shadow my-card'>
-											<Image width={350} height={197} src={item.image} />
+											<Image
+												width={350}
+												height={197}
+												src={item.image}
+												alt={'image'}
+											/>
 
 											<div className='p-5'>
-												<a href='#'>
-													<h5 className='mb-2 text-lg font-bold tracking-tight text-gray-900'>
-														{item.name_ka}
-													</h5>
-												</a>
+												<h5 className='mb-2 text-lg font-bold tracking-tight text-gray-900'>
+													{item.name_ka}
+												</h5>
+
 												<p
 													className='mb-3 font-normal text-gray-700 dark:text-gray-400'
 													dangerouslySetInnerHTML={

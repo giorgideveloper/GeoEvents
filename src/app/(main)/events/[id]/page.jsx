@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { eventApiId } from '../../../../../api/api';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
+import Footer from '../../components/footer';
 
 // eslint-disable-next-line @next/next/no-async-client-component
 export default function Page(params) {
@@ -48,7 +49,7 @@ export default function Page(params) {
 									</h5>
 									<p className='pb-3 font-bold text-sm'>აღწერა</p>
 									<p
-										className='mb-3 font-normal text-gray-700 dark:text-gray-600'
+										className='mb-3 description font-normal text-gray-700 dark:text-gray-600'
 										dangerouslySetInnerHTML={
 											post.text_ka === undefined
 												? ''
@@ -192,6 +193,7 @@ export default function Page(params) {
 				<div className='h-2 bg-gray-200 rounded-full dark:bg-gray-300 max-w-[720px] mb-4'></div>
 				<div className='h-2 bg-gray-200 rounded-full dark:bg-gray-300 max-w-[720px] mb-4'></div>
 			</div> */}
+			<Footer />
 		</>
 	);
 }

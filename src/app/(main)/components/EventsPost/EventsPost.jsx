@@ -34,7 +34,7 @@ export default function EventsPost() {
 						? post.map(item => (
 								<>
 									<Link key={item.id} href={`events/${item.id}`} alt=''>
-										<div className='  bg-white border border-gray-200 rounded-2xl shadow my-card'>
+										<div className=' h-full bg-white border border-gray-200 rounded-2xl shadow my-card'>
 											<Image
 												width={350}
 												height={197}
@@ -48,11 +48,11 @@ export default function EventsPost() {
 												</h5>
 
 												<p
-													className='mb-3 font-normal text-gray-700 dark:text-gray-400'
+													className='mb-3 description font-normal text-gray-700 dark:text-gray-400'
 													dangerouslySetInnerHTML={
 														item.text_ka === undefined
 															? ''
-															: Dangerously(item.text_ka.slice(0, 120))
+															: Dangerously(item.text_ka.slice(0, 150))
 													}
 												></p>
 											</div>

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { eventApi } from '../../../../api/api';
 import Navbar from '../components/Navbar';
+import Footer from '../components/footer';
 
 // eslint-disable-next-line @next/next/no-async-client-component
 export default function Page() {
@@ -65,6 +66,7 @@ export default function Page() {
 						: 'Loading'}
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }

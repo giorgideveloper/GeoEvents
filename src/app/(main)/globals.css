@@ -62,3 +62,8 @@ border-radius: 10px;
 .sidebar{
   height:370px
 }
+.description img{
+  width: 16px;
+  height: 16px;
+
+}

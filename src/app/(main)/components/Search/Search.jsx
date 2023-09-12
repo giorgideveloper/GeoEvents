@@ -17,6 +17,8 @@ export default function Search() {
 			} catch (e) {
 				console.log(e);
 			}
+		} else {
+			setItme('');
 		}
 	};
 	useEffect(() => {

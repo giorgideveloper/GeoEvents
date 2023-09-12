@@ -19,6 +19,18 @@ export const eventApi = async () => {
 	}
 };
 
+export const eventApiId = async str => {
+	try {
+		const response = await axios.get(
+			`https://batumievents.com/api/event.php?id=${str}`
+		);
+
+		return response.data;
+	} catch (error) {
+		throw error;
+	}
+};
+
 export const eventApiSearch = async str => {
 	try {
 		const response = await axios.get(

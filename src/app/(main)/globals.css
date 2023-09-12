@@ -51,3 +51,14 @@ width: 100% !important;
       height: 73.144px;
       flex-shrink: 0;
 }
+.page{
+  border-radius: 10px;
+}
+
+.page img{
+  height: 370px;
+border-radius: 10px;
+}
+.sidebar{
+  height:370px
+}

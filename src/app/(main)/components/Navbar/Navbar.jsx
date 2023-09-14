@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Search from '../Search/Search';
-
+import Language from './language/Language';
 export default function Navbar() {
 	return (
 		<>
@@ -46,6 +46,7 @@ export default function Navbar() {
 							</svg>
 							<span className='sr-only'>Search</span>
 						</button>
+
 						<div className='relative hidden md:block'>
 							<div className='absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none'>
 								<svg
@@ -67,6 +68,7 @@ export default function Navbar() {
 							</div>
 							<Search />
 						</div>
+
 						<button
 							data-collapse-toggle='navbar-search'
 							type='button'

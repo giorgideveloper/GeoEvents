@@ -11,8 +11,8 @@ export default function SearchContainer({ item }) {
 		<>
 			{item
 				? item.map(item => (
-						<div className=' pb-5 ' key={item.id}>
-							<Link href={`events/${item.id}`} alt=''>
+						<div className=' pb-5 z-50' key={item.id}>
+							<Link href={`/events/${item.id}`} alt=''>
 								<div className=' h-full bg-white border border-gray-200  shadow search-card '>
 									<Image
 										width={350}

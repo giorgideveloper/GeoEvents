@@ -38,7 +38,7 @@ export default function Page() {
 								<>
 									<div key={item.id}>
 										<Link href={`events/${item.id}`} alt=''>
-											<div className='  bg-white border border-gray-200 rounded-2xl shadow my-card'>
+											<div className='  bg-white border border-gray-200 rounded-lg shadow my-card'>
 												<Image
 													width={350}
 													height={197}
@@ -59,6 +59,7 @@ export default function Page() {
 																: Dangerously(item.text_ka.slice(0, 120))
 														}
 													></p>
+													<p className='font-bold'>{item.category_name_ka}</p>
 												</div>
 											</div>
 										</Link>

@@ -5,7 +5,7 @@ import React from 'react';
 export default function SearchContainer({ item }) {
 	return (
 		<>
-			<div className='overflow-auto    max-h-52  w-96 '>
+			<div className='overflow-auto    max-h-52  w-full md:w-96'>
 				{item
 					? item.map(item => (
 							<div className='' key={item.id}>

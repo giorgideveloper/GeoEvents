@@ -1,10 +1,14 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import Search from '../Search/Search';
-import Language from './language/Language';
+
 export default function Navbar() {
+	const [isSearchOpen, setIsSearchOpen] = useState(false);
+	const toggleSearch = () => {
+		setIsSearchOpen(!isSearchOpen);
+	};
 	return (
 		<>
 			<nav className='bg-white border-gray-200 dark:bg-gray-900'>
@@ -30,7 +34,7 @@ export default function Navbar() {
 							className='md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1'
 						>
 							<svg
-								className='w-5 h-5'
+								className='w-5 h-5 hidden'
 								aria-hidden='true'
 								xmlns='http://www.w3.org/2000/svg'
 								fill='none'
@@ -75,6 +79,7 @@ export default function Navbar() {
 							className='inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
 							aria-controls='navbar-search'
 							aria-expanded='false'
+							onClick={toggleSearch}
 						>
 							<span className='sr-only'>Open main menu</span>
 							<svg
@@ -95,7 +100,9 @@ export default function Navbar() {
 						</button>
 					</div>
 					<div
-						className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
+						className={`items-center justify-between ${
+							isSearchOpen ? 'block' : 'hidden'
+						} w-full md:flex md:w-auto md:order-1`}
 						id='navbar-search'
 					>
 						<div className='relative mt-3 md:hidden'>

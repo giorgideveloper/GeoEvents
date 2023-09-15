@@ -34,26 +34,26 @@ export default function Slider() {
 
 	return (
 		<>
-			<div className='container mx-auto my-slider'>
-				<div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-1  gap-1 pt-8'>
-					<div className='col-span-2'>
+			<div className='container max-w-screen-xl z-10 mx-auto my-slider'>
+				<div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1   gap-1 pt-8'>
+					<div className='col-span-2 '>
 						{post ? (
-							<div className='w-full relative  '>
+							<div className='w-full relative '>
 								<Swiper
-									className='relative'
+									className='relative z-10'
 									modules={[Navigation, Pagination, Scrollbar, A11y]}
 									spaceBetween={50}
 									slidesPerView={1}
 									navigation
 									pagination={{ clickable: true }}
-									onSlideChange={() => console.log('slide change')}
+									lazy='true'
 								>
 									{post?.map(img => (
 										<SwiperSlide key={img.id}>
 											{' '}
 											<Link href={`events/${img.id}`}>
 												<Image
-													className='w-full cursor-pointer  h-auto max-w-full'
+													className='w-full cursor-pointer z-10  h-auto max-w-full'
 													src={
 														img.image ||
 														'https://follow.geoevents.ge/media/media/obieqtebi/default.jpg'
@@ -61,6 +61,7 @@ export default function Slider() {
 													alt={`${post.object_name}`}
 													width={400}
 													height={500}
+													loading='lazy'
 												/>
 											</Link>
 										</SwiperSlide>

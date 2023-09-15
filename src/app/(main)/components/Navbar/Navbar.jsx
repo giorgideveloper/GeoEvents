@@ -8,7 +8,7 @@ export default function Navbar() {
 	return (
 		<>
 			<nav className='bg-white border-gray-200 dark:bg-gray-900'>
-				<div className='max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto py-4'>
+				<div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-4'>
 					<Link href={'/'} className='flex items-center'>
 						<Image
 							src='https://flowbite.com/docs/images/logo.svg'

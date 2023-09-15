@@ -27,7 +27,7 @@ export default function EventsPost() {
 
 	return (
 		<>
-			<div className='container mx-auto'>
+			<div className='container max-w-screen-xl mx-auto'>
 				<h1 className='popular-events pt-8'>Popular Events</h1>
 				<div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pt-8'>
 					{post
@@ -35,7 +35,7 @@ export default function EventsPost() {
 								<>
 									<div key={item.id}>
 										<Link href={`events/${item.id}`} alt=''>
-											<div className=' h-full bg-white border border-gray-200 rounded-2xl shadow my-card'>
+											<div className=' h-full bg-[#ccc0]    my-card'>
 												<Image
 													width={350}
 													height={197}
@@ -47,15 +47,18 @@ export default function EventsPost() {
 													<h5 className='mb-2 text-lg font-bold tracking-tight text-gray-900'>
 														{item.name_ka}
 													</h5>
-
 													<p
-														className='mb-3 description font-normal text-gray-700 dark:text-gray-400'
+														className='mb-3 description font-normal text-gray-700 dark:text-gray-500'
 														dangerouslySetInnerHTML={
 															item.text_ka === undefined
 																? ''
 																: Dangerously(item.text_ka.slice(0, 150))
 														}
 													></p>
+
+													<p className='font-bold text-[#4F709C]'>
+														{item.category_name_ka}
+													</p>
 												</div>
 											</div>
 										</Link>

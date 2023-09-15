@@ -32,10 +32,10 @@ export default function Page(params) {
 		<>
 			<Navbar />
 			{post ? (
-				<div className='container mx-auto'>
+				<div className='container max-w-screen-xl mx-auto'>
 					<div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-3 pt-8'>
 						<>
-							<div className='page  bg-white border border-gray-200 rounded-md shadow my-card col-span-2 '>
+							<div className='page  bg-white  rounded-md shadow-[#F0F0F0]  shadow-sm my-card col-span-2 '>
 								<Image
 									width={550}
 									height={530}
@@ -58,7 +58,7 @@ export default function Page(params) {
 									></p>
 								</div>
 							</div>
-							<div className=' bg-white text-xl border sidebar border-gray-200 rounded-md shadow font-normal text-gray-700 dark:text-gray-700'>
+							<div className=' bg-white text-xl border sidebar border-gray-200 rounded-md shadow-sm shadow-[#F0F0F0] font-normal text-gray-700 dark:text-gray-700'>
 								<p className='pt-6 pl-6 text-3xl font-bold'>ინფორმაცია </p>
 								<ul className='p-6'>
 									<li className='flex  pb-6'>

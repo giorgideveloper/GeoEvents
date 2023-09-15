@@ -32,10 +32,10 @@ export default function Search() {
 				onChange={e => setPost(e.target.value)}
 				type='text'
 				id='search-navbar'
-				className='block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
+				className='block  w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
 				placeholder='Search...'
 			/>
-			<div className='absolute dark:bg-gray-700/50 w-full text-gray-50 rounded-b-lg'>
+			<div className='absolute bg-white w-full z-50 text-gray-50 border-0 w-auto '>
 				<SearchContainer item={item} />
 			</div>
 		</>

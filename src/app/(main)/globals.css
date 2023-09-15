@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body{
-  background: #F5F6FF;
+  background: #F8FAFC;
+  min-height: 100vh;
 }
 .my-card img{
   width: 100%;
@@ -93,8 +94,29 @@ border-radius: 10px;
 .search-card  {
   border-radius: none !important;
   height: 100px;
-  
 }
 .search-card img{
   height: 50px;
+}
+.search-content{
+  display: grid;
+    grid-template-columns: 110px auto;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 0.2rem;
+    -webkit-box-align: center;
+    align-items: center;
+    margin-bottom: 0.75rem;
+       
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+
+
+footer {
+  margin-top: auto;
+  /* Footer height */
 }

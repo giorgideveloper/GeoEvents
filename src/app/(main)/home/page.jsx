@@ -7,9 +7,11 @@ import Footer from '../components/footer/';
 export default function Page() {
 	return (
 		<>
-			<Navbar />
-			<Slider />
-			<Events />
+			<div className='page-container'>
+				<Navbar />
+				<Slider />
+				<Events />
+			</div>
 			<Footer />
 		</>
 	);

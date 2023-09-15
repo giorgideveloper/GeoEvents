@@ -7,7 +7,7 @@ export default function page() {
 		<>
 			{' '}
 			<Navbar />
-			<div>
+			<div className='h-screen'>
 				<h1 className=' text-4xl text-center pt-10'>ჩვენს შესახებ</h1>
 			</div>
 			<Footer className='' />

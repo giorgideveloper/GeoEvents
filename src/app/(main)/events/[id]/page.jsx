@@ -1,27 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
-'use client';
-import { useEffect, useState } from 'react';
+
 import { eventApiId } from '../../../../../api/api';
 import Navbar from '../../components/Navbar';
 import Image from 'next/image';
 import Footer from '../../components/footer';
 
 // eslint-disable-next-line @next/next/no-async-client-component
-export default function Page(params) {
-	let [post, setPost] = useState();
-
-	useEffect(() => {
-		const fetchData = async () => {
-			try {
-				const response = await eventApiId(params.params.id);
-				setPost(response);
-			} catch (e) {
-				console.log(e);
-			}
-		};
-
-		fetchData();
-	}, [params.params.id]);
+export default async function Page(params) {
+	const response = await eventApiId(params.params.id);
 
 	const Dangerously = str => {
 		const markup = { __html: `${str}` };
@@ -31,7 +17,7 @@ export default function Page(params) {
 	return (
 		<>
 			<Navbar />
-			{post ? (
+			{response ? (
 				<div className='container max-w-screen-xl mx-auto'>
 					<div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-3 pt-8'>
 						<>
@@ -39,21 +25,21 @@ export default function Page(params) {
 								<Image
 									width={550}
 									height={530}
-									src={post.image}
+									src={response.image}
 									alt={'image'}
 								/>
 
 								<div className='p-5'>
 									<h5 className='mb-2 text-3xl font-bold tracking-tight text-gray-900'>
-										{post.name_ka}
+										{response.name_ka}
 									</h5>
 									<p className='pb-3 font-bold text-sm'>აღწერა</p>
 									<p
 										className='mb-3 description font-normal text-gray-700 dark:text-gray-600'
 										dangerouslySetInnerHTML={
-											post.text_ka === undefined
+											response.text_ka === undefined
 												? ''
-												: Dangerously(post.text_ka.slice(0))
+												: Dangerously(response.text_ka.slice(0))
 										}
 									></p>
 								</div>
@@ -79,7 +65,7 @@ export default function Page(params) {
 										</svg>
 										<span className='font-bold pl-2'>
 											{' '}
-											{post.category_name_ka}
+											{response.category_name_ka}
 										</span>
 									</li>
 									<li className='flex pb-6 '>
@@ -105,7 +91,7 @@ export default function Page(params) {
 										</svg>
 										<span className='font-bold pl-2'>
 											{' '}
-											{post.location_name_ka}
+											{response.location_name_ka}
 										</span>
 									</li>
 									<li className='flex  pb-6 '>
@@ -145,8 +131,8 @@ export default function Page(params) {
 										</svg>
 										<span className='font-bold pl-2'>
 											{' '}
-											{`${post.start_date.slice(0, 10)} -
-												${post.end_date.slice(0, 10)}`}
+											{`${response.start_date.slice(0, 10)} -
+												${response.end_date.slice(0, 10)}`}
 										</span>
 									</li>
 								</ul>

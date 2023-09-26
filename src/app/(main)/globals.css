@@ -15,25 +15,24 @@ border-top-right-radius: 10px;
 
 }
 .my-card{
-border-radius: 10px;
-width: 100% !important;
-
+  border-radius: 10px;
+  width: 100% !important;
 }
 .popular-events{
   color: #242565;
-    font-family: Arial;
-    font-size: 36px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+  font-family: Arial;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
 .my-slider img{
   height: 430px;
   object-fit: cover;
   border-radius: 22px;
-    background-repeat: no-repeat;
-      background-size: 100% auto;
-      background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: center;
   
 }
 .slider-btn{
@@ -100,12 +99,12 @@ border-radius: 10px;
 }
 .search-content{
   display: grid;
-    grid-template-columns: 110px auto;
-    grid-template-rows: 1fr 1fr 1fr;
-    column-gap: 0.2rem;
-    -webkit-box-align: center;
-    align-items: center;
-    margin-bottom: 0.75rem;
+  grid-template-columns: 110px auto;
+  grid-template-rows: 1fr 1fr 1fr;
+  column-gap: 0.2rem;
+  -webkit-box-align: center;
+  align-items: center;
+  margin-bottom: 0.75rem;
        
 }
 

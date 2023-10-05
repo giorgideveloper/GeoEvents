@@ -27,10 +27,10 @@ export default function Slider() {
 		fetchData();
 	}, []);
 
-	const Dangerously = str => {
-		const markup = { __html: `${str}` };
-		return markup;
-	};
+	// const Dangerously = str => {
+	// 	const markup = { __html: `${str}` };
+	// 	return markup;
+	// };
 
 	return (
 		<>

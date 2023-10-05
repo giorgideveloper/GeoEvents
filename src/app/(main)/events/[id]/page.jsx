@@ -21,7 +21,6 @@ export default async function Page(params) {
 
 	return (
 		<>
-			<Navbar />
 			{response ? (
 				<div className='container max-w-screen-xl mx-auto'>
 					<div className='grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-3 pt-8'>
@@ -184,7 +183,6 @@ export default async function Page(params) {
 				<div className='h-2 bg-gray-200 rounded-full dark:bg-gray-300 max-w-[720px] mb-4'></div>
 				<div className='h-2 bg-gray-200 rounded-full dark:bg-gray-300 max-w-[720px] mb-4'></div>
 			</div> */}
-			<Footer />
 		</>
 	);
 }

@@ -36,7 +36,7 @@ export default function Search() {
 				placeholder='Search...'
 			/>
 			<div className='absolute bg-white w-full z-50 text-gray-50 border-0 w-auto '>
-				<SearchContainer item={item} />
+				<SearchContainer item={item} setItme={setItme} />
 			</div>
 		</>
 	);
